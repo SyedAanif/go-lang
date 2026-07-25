@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@2.0.10"></script> 
+    <!-- Directly loading the HTMX PKG -->
+    <title>Go + HTMX</title>
+</head>
+<body>
+    <h1>GO + HTMX</h1>
+
+    <!-- Rendered via templating -->
+    <h2>{{.Message}}</h2>
+
+    <!-- Call GET /time to render in target -->
+    <button hx-get="/time" hx-target="#time">Get Current Time</button>
+
+    <h2 id="time">Shows current time</h2>
+    
+</body>
+</html>
